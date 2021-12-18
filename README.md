@@ -13,7 +13,7 @@ I have first filtered out messages containing the mentioned keywords 'shiba' and
 After filtering out messages with above conditions I have toeknized the message using nltk tokenizer to reomve stop words from the text. This is done in tokenize_message() and remove_stop_words() method.
 To remove stop words I have used stopwords from the corpus available in nltk. (nltk.stopwords)
 After doing above prerpocessing the message is then sent to SentimentIntensityAnalyzer of nltk to get the polarity_scores of the message.
-I have considered cpmpound_score from the polarity_scores to determine the sentiment of the message. I have stored sentiment of each message in "sentiment" column of the data frame. It has either positive, neutral or negative values.
+I have considered cpmpound_score from the polarity_scores to determine the sentiment of the message. I have stored sentiment of each message in "sentiment" column of the data frame. It has either positive, neutral or negative values. The ranges are choosen as folllows : if compound_score >=0.05 it is positive, if compound_score <= 0 it is negative and else it is neutral.
 After computing the sentiment score of each message I have calculated average sentiment of each day by computing average of compound scores for each day. To achieve this I have aggregated pandas data fram on date object and calculated mean from pandas inbuilt method mean() on data frame.
 I have plotted the averaged copound score over each day using bar graphs in plotly. This is plot_1.png in the repo
 Similarly I have aggregated no. of messages per day and plotted using plotly. This is plot_2.png in the repo
@@ -21,7 +21,9 @@ I have also generated plot for no. of messages of each sentiment per day. This i
 
 **Summary of results**
 
-There are total 1998 english messages from May 1, 2021 to May 15, 2021 which contains wither of these keywords "shiba" "doge"
-Sentiment fluctuates between neutral and postive on most days except on May 6 where there is a sudden change in the sentiment which goes to Negative.
-There were lot of messages related to these keywords on (>400 per day) on May 8th and May 10th.
-Average sentiment which is initally positive declines to its lowest (Negative) on May 6th and reahces to positive again on May 7th and fluctuates for a few days between positive and neutral up May 12th. It then starts to increase the sentiment score increasing each time from May 12th to May 15th.
+There are total 2403 english messages from May 1, 2021 to May 15, 2021 which contains wither of these keywords "shib" or "doge"
+The sentiment initially starts from positive on May 1 and fluctuates in the positive region up to May 4 after which it starts its decline to Neutral and to Negative on May 5th and 6th respectively
+The sentiment then starts to raise to positive from May 7th and then fluctuates for few days between Positive and Neutral for few Days upto May12th
+It then contineus to rise from 13th till 15th of May just about reaching its initial value
+There were lot of messages related to these keywords (around 600 per day) on May 8th and May 10th.
+
