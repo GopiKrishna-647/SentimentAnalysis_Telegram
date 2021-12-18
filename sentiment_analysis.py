@@ -92,7 +92,7 @@ by sentiment analyzer
 def find_sentiment(score) :
     if score >= 0.05 :
         return "Positive"
-    elif score <= -0.05 :
+    elif score < 0 :
         return "Negative"
     else :
         return "Neutral"
