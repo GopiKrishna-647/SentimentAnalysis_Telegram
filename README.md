@@ -25,4 +25,4 @@ There are total 2403 english messages from May 1, 2021 to May 15, 2021 which con
 The sentiment initially starts from positive on May 1 and fluctuates in the positive region up to May 4 after which there is a dip in its value. It starts to decline from Positive to Neutral to Negative  from May 4th to May 5th to 6th.
 The sentiment then starts to raise to positive from May 7th and then fluctuates for a few days between Positive and Neutral between May 8th and May12th
 It then continues to rise from 13th till 15th of May just about reaching its initial value and reching Positive sentiment
-There were lot of messages related to these keywords (around 600 per day) on May 8th and May 10th.
+Highest number of messages were recorded related to these keywords (around 600 messages per day) on May 8th and May 10th.
