@@ -1,0 +1,4 @@
+This project requires python3 env.
+This project uses few standard libraries like nltk, plotly and pandas. So there packages should be installed first to run this project.
+These packages can be installed using pip3 install. Eg : pip3 install nltk
+This project uses few word corpuses from nltk which needs to be downloaded. Required statements are added in intial import.
